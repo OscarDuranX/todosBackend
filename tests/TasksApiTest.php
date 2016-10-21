@@ -6,13 +6,29 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class TasksApiTest extends TestCase
 {
-    /**
-     * A basic test example.
-     *
-     * @return void
-     */
-    public function testExample()
+
+    protected $URI = '/api/task';
+    use DatabaseMigrations;
+    public function testShowAllTasks()
     {
-        $this->assertTrue(true);
+        $this->json('GET',$this->URI)
+//            ->dump()
+              ->seeJson();
+    }
+
+    public function testShowOneTask()
+    {
+        $task = factory(App\Task::class) ->create();
+        $this->json('GET', $this->URI .'/'. $task->id)
+//            ->dump();
+//            ->seeJson();
+              ->seeJsonStructure(
+                  ["id", "name", "done", "priority"]
+              )
+              ->seeJsonContains([
+                "name" => $task->name,
+                "done" => $task->done,
+                "priority" => $task->priority
+              ]);
     }
 }
