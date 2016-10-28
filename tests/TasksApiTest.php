@@ -7,7 +7,7 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 class TasksApiTest extends TestCase
 {
 
-    protected $URI = '/api/task';
+    protected $URI = '/api/v1/task';
     use DatabaseMigrations;
     public function testShowAllTasks()
     {
