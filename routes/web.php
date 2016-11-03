@@ -15,4 +15,4 @@
 //    return view('welcome');
 //});
 
-Route::resource('api/v1/task', 'TasksController');
+

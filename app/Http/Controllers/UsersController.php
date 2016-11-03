@@ -2,30 +2,22 @@
 
 namespace App\Http\Controllers;
 
-use App\Task;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
-use Response;
 
-class TasksController extends Controller
+class UsersController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index()
     {
-//        return Task::all();
+        $user = Task::paginate(15);
 
-
-        $tasks = Task::paginate(15);
-
-        return $this->generatePaginatedResponse($tasks, ['propietari' => 'Oscar Duran']);
-
-//        return Task::paginate($request->input('per_page'));
+        return $this->generatePaginatedResponse($user, ['propietari' => 'Oscar Duran']);
     }
 
     /**
@@ -46,7 +38,7 @@ class TasksController extends Controller
      */
     public function store(Request $request)
     {
-        Task::create($request->input());
+        //
     }
 
     /**
@@ -57,29 +49,7 @@ class TasksController extends Controller
      */
     public function show($id)
     {
-//        try{
-//            return Task::findOrFail($id);
-//        } catch(\Exception $e) {
-//            return Response::json([
-//               "error" => "Hi ha hagut una exceió",
-//                "code" => 10
-//            ],404);
-//        }
-
-//        $task = Task::find($id);
-//
-//        if ( $task != null){
-//            return $task;
-//        }
-//
-//        return Response::json([
-//            "error" => "Hi ha hagut una exceió",
-////                "code" => 10
-//        ],404);
-
-        $task = Task::findOrFail($id);
-
-        return $this->transform($task);
+        //
     }
 
     /**
@@ -115,6 +85,4 @@ class TasksController extends Controller
     {
         //
     }
-
-
 }
