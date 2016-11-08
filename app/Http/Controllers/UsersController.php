@@ -6,7 +6,6 @@ use App\Transformers\UserTransformer;
 use App\User;
 use Illuminate\Http\Request;
 
-
 class UsersController extends Controller
 {
     /**
