@@ -2,16 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Task;
 use App\Transformers\TaskTransformer;
-use Illuminate\Database\Eloquent\Model;
+use App\User;
+
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
-use Response;
 
-class TasksController extends Controller
+class UserTasksController extends Controller
 {
+
     /**
      * TasksController constructor.
      */
@@ -26,16 +26,14 @@ class TasksController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index($id)
     {
-        // No metadata
-        // Pagination
-        // No error messages
-        // Transformations: hem de transformar el que ensenyem
-        $tasks = Task::paginate(15);
+
+        $user =  User::findOrFail($id);
+
+        $tasks = $user->tasks()->paginate(5);
         return $this->generatePaginatedResponse($tasks,["propietari" => "Sergi Tur"]);
     }
-
 
     /**
      * Show the form for creating a new resource.
@@ -55,11 +53,7 @@ class TasksController extends Controller
      */
     public function store(Request $request)
     {
-//        $request->input('name');
-//        dd($request->all());
-
-        Task::create($request->all());
-//        Task::create($request->all());
+        //
     }
 
     /**
@@ -70,29 +64,7 @@ class TasksController extends Controller
      */
     public function show($id)
     {
-//        try {
-//            return Task::findOrFail($id);
-//        } catch (\Exception $e) {
-//            return Response::json([
-//                "error" => "Hi ha hagut una excepció",
-//                "code" => 10
-//            ],404);
-//        }
-
-//        $task = Task::find($id);
-//
-//        if ( $task != null) {
-//            return $task;
-//        }
-//
-//        return Response::json([
-//            "error" => "Hi ha hagut una excepció",
-//            "code" => 10
-//        ],404);
-
-        $task = Task::findOrFail($id);
-        return $this->transformer->transform($task);
-
+        //
     }
 
     /**
@@ -128,8 +100,4 @@ class TasksController extends Controller
     {
         //
     }
-
-
-
-
 }

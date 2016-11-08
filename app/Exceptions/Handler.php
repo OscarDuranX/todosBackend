@@ -36,6 +36,7 @@ class Handler extends ExceptionHandler
     {
         parent::report($exception);
     }
+
     /**
      * Render an exception into an HTTP response.
      *
@@ -45,11 +46,14 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
-        if($exception instanceof ModelNotFoundException){
+        if ($exception instanceof ModelNotFoundException) {
             return Response::json([
-                "error" => "Hi ha hagut una exceió " . $exception->getMessage(),
+                "error" => "Hi ha hagut una excepció " . $exception->getMessage(),
                 "code" => 10
             ],404);
+        }
+        if ($exception instanceof IncorrectModelException) {
+//            return Response::json([
         }
         return parent::render($request, $exception);
     }

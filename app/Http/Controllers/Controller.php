@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Transformers\Contracts\Transformer;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -12,55 +13,53 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
+    protected $transformer;
+
     /**
-     * @param $tasks
+     * Controller constructor.
+     * @param $transformer
+     */
+    public function __construct(Transformer $transformer)
+    {
+        $this->transformer = $transformer;
+    }
+
+
+    protected function transformCollection($resources) {
+        //Collections: Laravel collections
+        return array_map(function($resource) {
+            return $this->transformer->transform($resource);
+        }, $resources);
+    }
+
+
+    /**
+     * @param $resource
      * @return \Illuminate\Http\JsonResponse
      */
-    public function generatePaginatedResponse($resources, array $metadata = [])
+    protected function generatePaginatedResponse($resources, array $metadata = [])
     {
-        $pagination = $this->generatePaginatedDate($resources);
-
+        $paginationData = $this->generatePaginationData($resources);
         $data = [
-            'data' => $this->transformCollecton($resources->items())
+            'data' => $this->transformCollection($resources->items())
         ];
-
-        return Response::json(array_merge($metadata, $pagination, $data), 200);
+        return Response::json(array_merge($metadata, $paginationData, $data), 200);
     }
 
     /**
-     * @param $tasks
+     * @param $resource
      * @return array
      */
-    public function generatePaginatedDate($resources)
+    protected function generatePaginationData($resources)
     {
         $paginationData = [
-            'propietari' => 'Oscar Duran',
             'total' => $resources->total(),
             'per_page' => $resources->perPage(),
             'current_page' => $resources->currentPage(),
             'last_page' => $resources->lastPage(),
-            'next_page' => $resources->nextPageurl(),
-            'prev_page_Url' => $resources->previousPageUrl(),
-
+            'next_page_url' => $resources->previousPageUrl(),
+            'prev_page_url' => $resources->nextPageUrl()
         ];
         return $paginationData;
-    }
-
-    protected function transform($resources)
-    {
-        return [
-            'name' => $resources['name'],
-            'done' => (boolean)$resources['done'],
-            'priority' => (integer)$resources['priority']
-        ];
-    }
-
-    protected function transformCollecton($resources)
-    {
-
-        return array_map(function ($resources) {
-            return $this->transform($resources);
-        }, $resources);
-
     }
 }
