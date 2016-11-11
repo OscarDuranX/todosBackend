@@ -12,8 +12,10 @@ class TasksController extends Controller
     /**
      * TasksController constructor.
      */
-    public function __construct(TaskTransformer $transformer)
+    public function __construct(TaskTransformer $transformer, TaskRepository $repository)
     {
+
+
         parent::__construct($transformer);
     }
 
