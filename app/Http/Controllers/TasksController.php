@@ -15,6 +15,8 @@ class TasksController extends Controller
     public function __construct(TaskTransformer $transformer, TaskRepository $repository)
     {
 
+        $this->repository = $repository;
+
 
         parent::__construct($transformer);
     }
@@ -90,9 +92,12 @@ class TasksController extends Controller
 //            "code" => 10
 //        ],404);
 
-        $task = Task::findOrFail($id);
+//        $task = Task::findOrFail($id);
 
+        $task = $this->repository->find($id);
         return $this->transformer->transform($task);
+
+//        return $this->transformer->transform($task);
     }
 
     /**
