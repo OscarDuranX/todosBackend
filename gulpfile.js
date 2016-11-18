@@ -24,6 +24,7 @@ elixir(function(mix) {
             './node_modules/admin-lte/dist/css/skins/_all-skins.css',
             './public/css/adminlte-less.css',
             './public/css/adminlte-app.css',
+            './node_modules/sweetalert/dist/sweetalert.css',
             './node_modules/icheck/skins/square/blue.css',
             './public/css/toastr.css',
         ])

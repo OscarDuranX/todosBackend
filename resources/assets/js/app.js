@@ -27,8 +27,9 @@ const app = new Vue({
             this.message= this.message.split('').reverse().join('');
         },
         fetchData: function() {
+            console.log('hola');
             // GET /someUrl
-            this.$http.get('/api/v1/task').then((response) => {
+            this.$http.get('/api/v1/task/5000').then((response) => {
                 this.todos = response.data.data;
                 console.log(response);
         }, (response) => {
@@ -37,9 +38,11 @@ const app = new Vue({
                 console.log(response);
             });
         },
-        created: function() {
-            console.log('Component created!');
-            this.fetchData()
-        }
+
+    },
+    created: function() {
+        console.log('Component created!');
+        this.fetchData()
+
     }
 });
