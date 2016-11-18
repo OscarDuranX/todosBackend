@@ -15,34 +15,9 @@ require('./bootstrap');
 
 Vue.component('example', require('./components/Example.vue'));
 
+Vue.component('todos', require('./components/TodosList.vue'));
+
 const app = new Vue({
     el: '#app',
-    data: {
-        message: 'Hello Vue que tal!',
-        seen: false,
-        todos: []
-    },
-    methods: {
-        reverseMessage:function () {
-            this.message= this.message.split('').reverse().join('');
-        },
-        fetchData: function() {
-            console.log('hola');
-            // GET /someUrl
-            this.$http.get('/api/v1/task/5000').then((response) => {
-                this.todos = response.data.data;
-                console.log(response);
-        }, (response) => {
-                // error callback
-                sweetAlert("Oops...", "Something went wrong!", "error");
-                console.log(response);
-            });
-        },
 
-    },
-    created: function() {
-        console.log('Component created!');
-        this.fetchData()
-
-    }
 });
