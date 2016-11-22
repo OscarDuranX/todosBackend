@@ -1,4 +1,4 @@
-@extends('adminlte::layouts.errors')
+@extends('adminlte::vendor.adminlte.layouts.errors')
 
 @section('htmlheader_title')
     {{ trans('adminlte_lang::message.serviceunavailable') }}
