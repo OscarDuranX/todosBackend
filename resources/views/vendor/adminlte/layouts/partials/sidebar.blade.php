@@ -34,7 +34,9 @@
             <li class="header">{{ trans('adminlte_lang::message.header') }}</li>
             <!-- Optionally, you can add icons to the links -->
             <li class="active"><a href="{{ url('home') }}"><i class='fa fa-link'></i> <span>{{ trans('adminlte_lang::message.home') }}</span></a></li>
-            <li><a href="#"><i class='fa fa-link'></i> <span>{{ trans('adminlte_lang::message.anotherlink') }}</span></a></li>çcfr09888888888888            <li><a href="{{ url('tasks') }}"><i class='fa fa-link'></i> <span>Taskes</span></a></li>
+            <li><a href="#"><i class='fa fa-link'></i> <span>{{ trans('adminlte_lang::message.anotherlink') }}</span></a></li>
+            <li><a href="{{ url('tasks') }}"><i class='fa fa-link'></i> <span>Taskes</span></a></li>
+            <li><a href="{{ url('profile/tokens') }}"><i class='fa fa-link'></i> <span>Tokens</span></a></li>
         </ul><!-- /.sidebar-menu -->
     </section>
     <!-- /.sidebar -->

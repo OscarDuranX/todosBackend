@@ -1,4 +1,4 @@
-@extends('adminlte::vendor.adminlte.layouts.app')
+@extends('adminlte::layouts.app')
 
 @section('htmlheader_title')
     Todo List
