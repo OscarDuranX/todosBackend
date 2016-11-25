@@ -33,6 +33,8 @@ require('sweetalert');
  * included with Laravel will automatically verify the header's value.
  */
 
+axios.defaults.headers.common['X-CSRF-TOKEN'] = Laravel.csrfToken;
+
 // Vue.http.interceptors.push((request, next) => {
 //     request.headers['X-CSRF-TOKEN'] = Laravel.csrfToken;
 //
