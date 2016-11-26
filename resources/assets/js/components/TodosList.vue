@@ -46,7 +46,7 @@
                         <th>Priority</th>
                         <th>Done</th>
                         <th>Progress</th>
-                        <th style="width: 40px">Label</th>
+                        <th style="width: 40px">Delete</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -60,7 +60,11 @@
                                 <div class="progress-bar progress-bar-danger" style="width: 55%"></div>
                             </div>
                         </td>
-                        <td><span class="badge bg-red">55%</span></td>
+                        <td><button type="button" class="btn btn-default btn-sm"
+                                    v-on:click="deleteTask(index)">
+                                <i class="fa fa-trash-o"></i>
+                            </button>
+                        </td>
                     </tr>
                     </tbody>
 
@@ -120,6 +124,10 @@
          },
 
          methods: {
+            deleteTask: function(index){
+                this.todos.splice(index, 1);
+
+            },
             addTodo: function() {
                 var value = this.newTodo && this.newTodo.trim();
                 if (!value) {
