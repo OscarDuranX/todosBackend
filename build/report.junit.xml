@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Application Test Suite" tests="28" assertions="49" failures="4" errors="8" time="10.597954">
+    <testsuite name="AcachaAdminLTELaravelTest" file="/home/oscar/Code/laravel/todosBackend/tests/AcachaAdminLTELaravelTest.php" tests="15" assertions="49" failures="4" errors="0" time="7.008529">
+      <testcase name="testLandingPage" class="AcachaAdminLTELaravelTest" file="/home/oscar/Code/laravel/todosBackend/tests/AcachaAdminLTELaravelTest.php" line="43" assertions="1" time="0.513808">
+        <failure type="Illuminate\Foundation\Testing\HttpException">AcachaAdminLTELaravelTest::testLandingPage
+A request to [http://localhost] failed. Received status code [500].
+
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithPages.php:220
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithPages.php:92
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithPages.php:61
+/home/oscar/Code/laravel/todosBackend/tests/AcachaAdminLTELaravelTest.php:45
+/home/oscar/.composer/vendor/phpunit/phpunit/src/TextUI/Command.php:185
+/home/oscar/.composer/vendor/phpunit/phpunit/src/TextUI/Command.php:115
+</failure>
+      </testcase>
+      <testcase name="testLandingPageWithUserLogged" class="AcachaAdminLTELaravelTest" file="/home/oscar/Code/laravel/todosBackend/tests/AcachaAdminLTELaravelTest.php" line="56" assertions="1" time="0.456637">
+        <failure type="Illuminate\Foundation\Testing\HttpException">AcachaAdminLTELaravelTest::testLandingPageWithUserLogged
+A request to [http://localhost] failed. Received status code [500].
+
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithPages.php:220
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithPages.php:92
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithPages.php:61
+/home/oscar/Code/laravel/todosBackend/tests/AcachaAdminLTELaravelTest.php:61
+/home/oscar/.composer/vendor/phpunit/phpunit/src/TextUI/Command.php:185
+/home/oscar/.composer/vendor/phpunit/phpunit/src/TextUI/Command.php:115
+</failure>
+      </testcase>
+      <testcase name="testLoginPage" class="AcachaAdminLTELaravelTest" file="/home/oscar/Code/laravel/todosBackend/tests/AcachaAdminLTELaravelTest.php" line="73" assertions="2" time="0.333174"/>
+      <testcase name="testLogin" class="AcachaAdminLTELaravelTest" file="/home/oscar/Code/laravel/todosBackend/tests/AcachaAdminLTELaravelTest.php" line="84" assertions="6" time="0.833455"/>
+      <testcase name="testLoginRequiredFields" class="AcachaAdminLTELaravelTest" file="/home/oscar/Code/laravel/todosBackend/tests/AcachaAdminLTELaravelTest.php" line="101" assertions="5" time="0.387481"/>
+      <testcase name="testRegisterPage" class="AcachaAdminLTELaravelTest" file="/home/oscar/Code/laravel/todosBackend/tests/AcachaAdminLTELaravelTest.php" line="116" assertions="2" time="0.297513"/>
+      <testcase name="testPasswordResetPage" class="AcachaAdminLTELaravelTest" file="/home/oscar/Code/laravel/todosBackend/tests/AcachaAdminLTELaravelTest.php" line="127" assertions="2" time="0.297714"/>
+      <testcase name="testHomePageForUnauthenticatedUsers" class="AcachaAdminLTELaravelTest" file="/home/oscar/Code/laravel/todosBackend/tests/AcachaAdminLTELaravelTest.php" line="138" assertions="4" time="0.345225"/>
+      <testcase name="testHomePageForAuthenticatedUsers" class="AcachaAdminLTELaravelTest" file="/home/oscar/Code/laravel/todosBackend/tests/AcachaAdminLTELaravelTest.php" line="149" assertions="2" time="0.415289"/>
+      <testcase name="testLogout" class="AcachaAdminLTELaravelTest" file="/home/oscar/Code/laravel/todosBackend/tests/AcachaAdminLTELaravelTest.php" line="163" assertions="3" time="0.585718">
+        <failure type="Illuminate\Foundation\Testing\HttpException">AcachaAdminLTELaravelTest::testLogout
+A request to [http://localhost] failed. Received status code [500].
+
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithPages.php:220
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithPages.php:92
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithPages.php:150
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithPages.php:92
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithPages.php:125
+/home/oscar/Code/laravel/todosBackend/tests/AcachaAdminLTELaravelTest.php:171
+/home/oscar/.composer/vendor/phpunit/phpunit/src/TextUI/Command.php:185
+/home/oscar/.composer/vendor/phpunit/phpunit/src/TextUI/Command.php:115
+</failure>
+      </testcase>
+      <testcase name="test404Page" class="AcachaAdminLTELaravelTest" file="/home/oscar/Code/laravel/todosBackend/tests/AcachaAdminLTELaravelTest.php" line="180" assertions="1" time="0.427205">
+        <failure type="PHPUnit_Framework_ExpectationFailedException">AcachaAdminLTELaravelTest::test404Page
+Failed asserting that 500 matches expected 404.
+
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php:463
+/home/oscar/Code/laravel/todosBackend/tests/AcachaAdminLTELaravelTest.php:183
+/home/oscar/.composer/vendor/phpunit/phpunit/src/TextUI/Command.php:185
+/home/oscar/.composer/vendor/phpunit/phpunit/src/TextUI/Command.php:115
+</failure>
+      </testcase>
+      <testcase name="testNewUserRegistration" class="AcachaAdminLTELaravelTest" file="/home/oscar/Code/laravel/todosBackend/tests/AcachaAdminLTELaravelTest.php" line="192" assertions="6" time="0.636457"/>
+      <testcase name="testRequiredFieldsOnRegistrationPage" class="AcachaAdminLTELaravelTest" file="/home/oscar/Code/laravel/todosBackend/tests/AcachaAdminLTELaravelTest.php" line="211" assertions="6" time="0.474303"/>
+      <testcase name="testSendPasswordReset" class="AcachaAdminLTELaravelTest" file="/home/oscar/Code/laravel/todosBackend/tests/AcachaAdminLTELaravelTest.php" line="225" assertions="4" time="0.631319"/>
+      <testcase name="testSendPasswordResetUserNotExists" class="AcachaAdminLTELaravelTest" file="/home/oscar/Code/laravel/todosBackend/tests/AcachaAdminLTELaravelTest.php" line="240" assertions="4" time="0.373231"/>
+    </testsuite>
+    <testsuite name="TasksApiTest" file="/home/oscar/Code/laravel/todosBackend/tests/TasksApiTest.php" tests="13" assertions="0" failures="0" errors="8" time="3.589425">
+      <testcase name="testRetrieveAllTasks" class="TasksApiTest" file="/home/oscar/Code/laravel/todosBackend/tests/TasksApiTest.php" line="97" assertions="0" time="0.285505">
+        <error type="PHPUnit_Framework_ExceptionWrapper">TasksApiTest::testRetrieveAllTasks
+Illuminate\Database\QueryException: SQLSTATE[23000]: Integrity constraint violation: 19 NOT NULL constraint failed: tasks.user_id (SQL: insert into "tasks" ("name", "done", "priority", "updated_at", "created_at") values (Commodi aut autem aut non., 1, 6, 2016-11-29 16:57:11, 2016-11-29 16:57:11))
+
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Database/Connection.php:764
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Database/Connection.php:720
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Database/Connection.php:481
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Database/Connection.php:435
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Database/Query/Processors/Processor.php:32
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php:2142
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php:1441
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1607
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1576
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1472
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Database/Eloquent/FactoryBuilder.php:119
+/home/oscar/Code/laravel/todosBackend/tests/TasksApiTest.php:32
+/home/oscar/Code/laravel/todosBackend/tests/TasksApiTest.php:100
+/home/oscar/.composer/vendor/phpunit/phpunit/src/TextUI/Command.php:185
+/home/oscar/.composer/vendor/phpunit/phpunit/src/TextUI/Command.php:115
+</error>
+      </testcase>
+      <testcase name="testRetrieveOneTask" class="TasksApiTest" file="/home/oscar/Code/laravel/todosBackend/tests/TasksApiTest.php" line="121" assertions="0" time="0.277170">
+        <error type="PHPUnit_Framework_ExceptionWrapper">TasksApiTest::testRetrieveOneTask
+Illuminate\Database\QueryException: SQLSTATE[23000]: Integrity constraint violation: 19 NOT NULL constraint failed: tasks.user_id (SQL: insert into "tasks" ("name", "done", "priority", "updated_at", "created_at") values (Maxime deserunt repellendus repudiandae iure vel magnam accusantium., 0, 4, 2016-11-29 16:57:11, 2016-11-29 16:57:11))
+
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Database/Connection.php:764
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Database/Connection.php:720
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Database/Connection.php:481
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Database/Connection.php:435
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Database/Query/Processors/Processor.php:32
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php:2142
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php:1441
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1607
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1576
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1472
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Database/Eloquent/FactoryBuilder.php:116
+/home/oscar/Code/laravel/todosBackend/tests/TasksApiTest.php:69
+/home/oscar/Code/laravel/todosBackend/tests/TasksApiTest.php:124
+/home/oscar/.composer/vendor/phpunit/phpunit/src/TextUI/Command.php:185
+/home/oscar/.composer/vendor/phpunit/phpunit/src/TextUI/Command.php:115
+</error>
+      </testcase>
+      <testcase name="testCreateNewTask" class="TasksApiTest" file="/home/oscar/Code/laravel/todosBackend/tests/TasksApiTest.php" line="144" assertions="0" time="0.336632">
+        <error type="PHPUnit_Framework_ExceptionWrapper">TasksApiTest::testCreateNewTask
+ErrorException: Invalid argument supplied for foreach()
+
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Support/Arr.php:480
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php:297
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php:323
+/home/oscar/Code/laravel/todosBackend/tests/TasksApiTest.php:149
+/home/oscar/.composer/vendor/phpunit/phpunit/src/TextUI/Command.php:185
+/home/oscar/.composer/vendor/phpunit/phpunit/src/TextUI/Command.php:115
+</error>
+      </testcase>
+      <testcase name="testUpdateExistingTask" class="TasksApiTest" file="/home/oscar/Code/laravel/todosBackend/tests/TasksApiTest.php" line="159" assertions="0" time="0.285933">
+        <error type="PHPUnit_Framework_ExceptionWrapper">TasksApiTest::testUpdateExistingTask
+Illuminate\Database\QueryException: SQLSTATE[23000]: Integrity constraint violation: 19 NOT NULL constraint failed: tasks.user_id (SQL: insert into "tasks" ("name", "done", "priority", "updated_at", "created_at") values (Enim quas a sint ipsa vero., 1, 9, 2016-11-29 16:57:12, 2016-11-29 16:57:12))
+
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Database/Connection.php:764
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Database/Connection.php:720
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Database/Connection.php:481
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Database/Connection.php:435
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Database/Query/Processors/Processor.php:32
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php:2142
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php:1441
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1607
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1576
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1472
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Database/Eloquent/FactoryBuilder.php:116
+/home/oscar/Code/laravel/todosBackend/tests/TasksApiTest.php:69
+/home/oscar/Code/laravel/todosBackend/tests/TasksApiTest.php:161
+/home/oscar/.composer/vendor/phpunit/phpunit/src/TextUI/Command.php:185
+/home/oscar/.composer/vendor/phpunit/phpunit/src/TextUI/Command.php:115
+</error>
+      </testcase>
+      <testcase name="testDeleteExistingTask" class="TasksApiTest" file="/home/oscar/Code/laravel/todosBackend/tests/TasksApiTest.php" line="176" assertions="0" time="0.277454">
+        <error type="PHPUnit_Framework_ExceptionWrapper">TasksApiTest::testDeleteExistingTask
+Illuminate\Database\QueryException: SQLSTATE[23000]: Integrity constraint violation: 19 NOT NULL constraint failed: tasks.user_id (SQL: insert into "tasks" ("name", "done", "priority", "updated_at", "created_at") values (Eligendi et iure qui adipisci., 0, 0, 2016-11-29 16:57:12, 2016-11-29 16:57:12))
+
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Database/Connection.php:764
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Database/Connection.php:720
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Database/Connection.php:481
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Database/Connection.php:435
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Database/Query/Processors/Processor.php:32
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php:2142
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php:1441
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1607
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1576
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1472
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Database/Eloquent/FactoryBuilder.php:116
+/home/oscar/Code/laravel/todosBackend/tests/TasksApiTest.php:69
+/home/oscar/Code/laravel/todosBackend/tests/TasksApiTest.php:178
+/home/oscar/.composer/vendor/phpunit/phpunit/src/TextUI/Command.php:185
+/home/oscar/.composer/vendor/phpunit/phpunit/src/TextUI/Command.php:115
+</error>
+      </testcase>
+      <testcase name="Warning" assertions="0" time="0.003993"/>
+      <testcase name="testGetNotExistingTask" class="TasksApiTest" file="/home/oscar/Code/laravel/todosBackend/tests/TasksApiTest.php" line="205" assertions="0" time="0.342984">
+        <error type="PHPUnit_Framework_ExceptionWrapper">TasksApiTest::testGetNotExistingTask
+ErrorException: Invalid argument supplied for foreach()
+
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Support/Arr.php:480
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php:297
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php:323
+/home/oscar/Code/laravel/todosBackend/tests/TasksApiTest.php:195
+/home/oscar/Code/laravel/todosBackend/tests/TasksApiTest.php:207
+/home/oscar/.composer/vendor/phpunit/phpunit/src/TextUI/Command.php:185
+/home/oscar/.composer/vendor/phpunit/phpunit/src/TextUI/Command.php:115
+</error>
+      </testcase>
+      <testcase name="testUpdateNotExistingTask" class="TasksApiTest" file="/home/oscar/Code/laravel/todosBackend/tests/TasksApiTest.php" line="215" assertions="0" time="0.363414">
+        <error type="PHPUnit_Framework_ExceptionWrapper">TasksApiTest::testUpdateNotExistingTask
+ErrorException: Invalid argument supplied for foreach()
+
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Support/Arr.php:480
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php:297
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php:323
+/home/oscar/Code/laravel/todosBackend/tests/TasksApiTest.php:195
+/home/oscar/Code/laravel/todosBackend/tests/TasksApiTest.php:217
+/home/oscar/.composer/vendor/phpunit/phpunit/src/TextUI/Command.php:185
+/home/oscar/.composer/vendor/phpunit/phpunit/src/TextUI/Command.php:115
+</error>
+      </testcase>
+      <testcase name="testDeleteNotExistingTask" class="TasksApiTest" file="/home/oscar/Code/laravel/todosBackend/tests/TasksApiTest.php" line="225" assertions="0" time="0.336509">
+        <error type="PHPUnit_Framework_ExceptionWrapper">TasksApiTest::testDeleteNotExistingTask
+ErrorException: Invalid argument supplied for foreach()
+
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Support/Arr.php:480
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php:297
+/home/oscar/Code/laravel/todosBackend/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php:323
+/home/oscar/Code/laravel/todosBackend/tests/TasksApiTest.php:195
+/home/oscar/Code/laravel/todosBackend/tests/TasksApiTest.php:227
+/home/oscar/.composer/vendor/phpunit/phpunit/src/TextUI/Command.php:185
+/home/oscar/.composer/vendor/phpunit/phpunit/src/TextUI/Command.php:115
+</error>
+      </testcase>
+      <testcase name="testPagination" class="TasksApiTest" file="/home/oscar/Code/laravel/todosBackend/tests/TasksApiTest.php" line="235" assertions="0" time="0.270486"/>
+      <testcase name="testNameIsRequiredAndDefaultValues" class="TasksApiTest" file="/home/oscar/Code/laravel/todosBackend/tests/TasksApiTest.php" line="247" assertions="0" time="0.264714"/>
+      <testcase name="testPriorityHaveToBeAnInteger" class="TasksApiTest" file="/home/oscar/Code/laravel/todosBackend/tests/TasksApiTest.php" line="257" assertions="0" time="0.287486"/>
+      <testcase name="testDoneHaveToBeBoolean" class="TasksApiTest" file="/home/oscar/Code/laravel/todosBackend/tests/TasksApiTest.php" line="267" assertions="0" time="0.257145"/>
+    </testsuite>
+  </testsuite>
+</testsuites>
