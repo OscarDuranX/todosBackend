@@ -72,14 +72,17 @@
             </div>
             <!-- /.box-body -->
             <!--TODO http://www.pontikis.net/labs/bs_pagination/demo/-->
-            <div class="box-footer clearfix">
-                <ul class="pagination pagination-sm no-margin pull-right">
-                    <li><a href="#">&laquo;</a></li>
-                    <li><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">&raquo;</a></li>
-                </ul>
+            <div class="box-footer clearfix">ç
+
+                <span class="pull-left">Showing {{ from }} to {{ to }} of {{ total }} entries</span>
+
+                <pagination
+                        :current-page="1"
+                        :total-pages="perPage"
+                        :total-items="total">
+
+                </pagination>
+
             </div>
         </div>
 </div>
@@ -90,14 +93,22 @@
 </style>
 
 <script>
+import Pagination from './Pagination.vue'
+
      export default {
+
+     components : { Pagination },
          data(){
             return {
                 message: 'Hello Vue que tal!',
                 seen: false,
                 todos: [],
                 visibility: 'all',
-                newTodo: ''
+                newTodo: '',
+                perPage: 5,
+                from: 0,
+                to: 0,
+                total: 0
             }
          },
 
@@ -157,6 +168,37 @@
                     sweetAlert("Oops...", "Something went wrong!", "error");
                     console.log(response);
                 });
+            },
+            addTodoToApi: function(page) {
+             this.$http.post('/api/v1/task?', {
+                    name: todo.name,
+                    priority: todo.priority,
+                    done: todo.done,
+                    user_id: 1
+                }).then((response) => {
+                console.log(response);
+            }, (response) => {
+                // error callback
+                sweetAlert("Oops...", "Something went wrong!", "error");
+                console.log(response);
+            });
+
+            },
+
+            fetchPage: function(page) {
+            // GET /someUrl
+            this.$http.get('/api/v1/task?page=' + page).then((response) => {
+                console.log(response);
+                this.todos = response.data.data;
+                this.perPage = response.data.per_page;
+                this.to = response.data.to;
+                this.from = response.data.from;
+                this.total = response.data.total;
+            }, (response) => {
+                // error callback
+                sweetAlert("Oops...", "Something went wrong!", "error");
+                console.log(response);
+            });
             },
 
 
