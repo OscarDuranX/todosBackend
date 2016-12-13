@@ -49,13 +49,15 @@ class TasksController extends Controller
      */
     public function index(Request $request)
     {
-        // No metadata
-        // Pagination
-        // No error messages
-        // Transformations: hem de transformar el que ensenyem
-        $tasks = Task::paginate(15);
 
-        return $this->generatePaginatedResponse($tasks, ['propietari' => 'Sergi Tur']);
+            // No metadata
+            // Pagination
+            // No error messages
+            // Transformations: hem de transformar el que ensenyem
+            $tasks = Task::paginate(15);
+
+            return $this->generatePaginatedResponse($tasks, ['propietari' => 'Sergi Tur']);
+
     }
 
     /**
