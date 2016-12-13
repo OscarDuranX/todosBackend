@@ -1,49 +1,7 @@
 TAP version 13
-not ok 1 - Failure: AcachaAdminLTELaravelTest::testLandingPage
+not ok 1 - Failure: TasksControllerTest::testAuthorizedIndex
   ---
-  message: 'A request to [http://localhost] failed. Received status code [500].'
+  message: 'Expected status code 200, got 500.'
   severity: fail
   ...
-not ok 2 - Failure: AcachaAdminLTELaravelTest::testLandingPageWithUserLogged
-  ---
-  message: 'A request to [http://localhost] failed. Received status code [500].'
-  severity: fail
-  ...
-ok 3 - AcachaAdminLTELaravelTest::testLoginPage
-ok 4 - AcachaAdminLTELaravelTest::testLogin
-ok 5 - AcachaAdminLTELaravelTest::testLoginRequiredFields
-ok 6 - AcachaAdminLTELaravelTest::testRegisterPage
-ok 7 - AcachaAdminLTELaravelTest::testPasswordResetPage
-ok 8 - AcachaAdminLTELaravelTest::testHomePageForUnauthenticatedUsers
-ok 9 - AcachaAdminLTELaravelTest::testHomePageForAuthenticatedUsers
-not ok 10 - Failure: AcachaAdminLTELaravelTest::testLogout
-  ---
-  message: 'A request to [http://localhost] failed. Received status code [500].'
-  severity: fail
-  ...
-not ok 11 - Failure: AcachaAdminLTELaravelTest::test404Page
-  ---
-  message: 'Failed asserting that 500 matches expected 404.'
-  severity: fail
-  data:
-      got: 500
-      expected: 404
-  ...
-ok 12 - AcachaAdminLTELaravelTest::testNewUserRegistration
-ok 13 - AcachaAdminLTELaravelTest::testRequiredFieldsOnRegistrationPage
-ok 14 - AcachaAdminLTELaravelTest::testSendPasswordReset
-ok 15 - AcachaAdminLTELaravelTest::testSendPasswordResetUserNotExists
-not ok 16 - Error: TasksApiTest::testRetrieveAllTasks
-not ok 17 - Error: TasksApiTest::testRetrieveOneTask
-not ok 18 - Error: TasksApiTest::testCreateNewTask
-not ok 19 - Error: TasksApiTest::testUpdateExistingTask
-not ok 20 - Error: TasksApiTest::testDeleteExistingTask
-not ok 21 - Warning: Warning
-not ok 22 - Error: TasksApiTest::testGetNotExistingTask
-not ok 23 - Error: TasksApiTest::testUpdateNotExistingTask
-not ok 24 - Error: TasksApiTest::testDeleteNotExistingTask
-ok 25 - TasksApiTest::testPagination
-ok 26 - TasksApiTest::testNameIsRequiredAndDefaultValues
-ok 27 - TasksApiTest::testPriorityHaveToBeAnInteger
-ok 28 - TasksApiTest::testDoneHaveToBeBoolean
-1..28
+1..1

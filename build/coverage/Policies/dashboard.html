@@ -2,7 +2,7 @@
 <html lang="en">
  <head>
   <meta charset="UTF-8">
-  <title>Dashboard for /home/oscar/Code/laravel/todosBackend/app/Repositories</title>
+  <title>Dashboard for /home/oscar/Code/laravel/todosBackend/app/Policies</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="../css/bootstrap.min.css" rel="stylesheet">
   <link href="../css/nv.d3.min.css" rel="stylesheet">
@@ -19,7 +19,7 @@
      <div class="col-md-12">
       <ol class="breadcrumb">
         <li><a href="../index.html">/home/oscar/Code/laravel/todosBackend/app</a></li>
-        <li><a href="index.html">Repositories</a></li>
+        <li><a href="index.html">Policies</a></li>
         <li class="active">(Dashboard)</li>
 
       </ol>
@@ -59,8 +59,7 @@
         </tr>
        </thead>
        <tbody>
-       <tr><td><a href="TaskRepository.php.html#7">TaskRepository</a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="UserRepository.php.html#7">UserRepository</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TaskPolicy.php.html#9">TaskPolicy</a></td><td class="text-right">12%</td></tr>
 
        </tbody>
       </table>
@@ -77,6 +76,7 @@
         </tr>
        </thead>
        <tbody>
+       <tr><td><a href="TaskPolicy.php.html#9">TaskPolicy</a></td><td class="text-right">50</td></tr>
 
        </tbody>
       </table>
@@ -114,8 +114,11 @@
         </tr>
        </thead>
        <tbody>
-       <tr><td><a href="TaskRepository.php.html#9"><abbr title="TaskRepository::find">find</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="UserRepository.php.html#9"><abbr title="UserRepository::find">find</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TaskPolicy.php.html#38"><abbr title="TaskPolicy::create">create</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TaskPolicy.php.html#27"><abbr title="TaskPolicy::view">view</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TaskPolicy.php.html#50"><abbr title="TaskPolicy::update">update</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TaskPolicy.php.html#64"><abbr title="TaskPolicy::delete">delete</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TaskPolicy.php.html#21"><abbr title="TaskPolicy::show">show</abbr></a></td><td class="text-right">50%</td></tr>
 
        </tbody>
       </table>
@@ -132,6 +135,8 @@
         </tr>
        </thead>
        <tbody>
+       <tr><td><a href="TaskPolicy.php.html#50"><abbr title="TaskPolicy::update">update</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="TaskPolicy.php.html#21"><abbr title="TaskPolicy::show">show</abbr></a></td><td class="text-right">2</td></tr>
 
        </tbody>
       </table>
@@ -162,7 +167,7 @@ $(document).ready(function() {
       .yAxis.tickFormat(d3.format('d'));
 
     d3.select('#classCoverageDistribution svg')
-      .datum(getCoverageDistributionData([2,0,0,0,0,0,0,0,0,0,0,0], "Class Coverage"))
+      .datum(getCoverageDistributionData([0,0,1,0,0,0,0,0,0,0,0,0], "Class Coverage"))
       .transition().duration(500).call(chart);
 
     nv.utils.windowResize(chart.update);
@@ -180,7 +185,7 @@ $(document).ready(function() {
       .yAxis.tickFormat(d3.format('d'));
 
     d3.select('#methodCoverageDistribution svg')
-      .datum(getCoverageDistributionData([2,0,0,0,0,0,0,0,0,0,0,0], "Method Coverage"))
+      .datum(getCoverageDistributionData([4,0,0,0,0,0,1,0,0,0,0,0], "Method Coverage"))
       .transition().duration(500).call(chart);
 
     nv.utils.windowResize(chart.update);
@@ -230,7 +235,7 @@ $(document).ready(function() {
     chart.yAxis.axisLabel('Cyclomatic Complexity');
 
     d3.select('#classComplexity svg')
-      .datum(getComplexityData([[0,1,"<a href=\"TaskRepository.php.html#7\">TaskRepository<\/a>"],[0,1,"<a href=\"UserRepository.php.html#7\">UserRepository<\/a>"]], 'Class Complexity'))
+      .datum(getComplexityData([[12.5,8,"<a href=\"TaskPolicy.php.html#9\">TaskPolicy<\/a>"]], 'Class Complexity'))
       .transition()
       .duration(500)
       .call(chart);
@@ -254,7 +259,7 @@ $(document).ready(function() {
     chart.yAxis.axisLabel('Method Complexity');
 
     d3.select('#methodComplexity svg')
-      .datum(getComplexityData([[0,1,"<a href=\"TaskRepository.php.html#9\">TaskRepository::find<\/a>"],[0,1,"<a href=\"UserRepository.php.html#9\">UserRepository::find<\/a>"]], 'Method Complexity'))
+      .datum(getComplexityData([[50,2,"<a href=\"TaskPolicy.php.html#21\">TaskPolicy::show<\/a>"],[0,1,"<a href=\"TaskPolicy.php.html#27\">TaskPolicy::view<\/a>"],[0,1,"<a href=\"TaskPolicy.php.html#38\">TaskPolicy::create<\/a>"],[0,3,"<a href=\"TaskPolicy.php.html#50\">TaskPolicy::update<\/a>"],[0,1,"<a href=\"TaskPolicy.php.html#64\">TaskPolicy::delete<\/a>"]], 'Method Complexity'))
       .transition()
       .duration(500)
       .call(chart);
