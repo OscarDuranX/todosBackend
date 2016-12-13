@@ -15,39 +15,18 @@
 //    return view('welcome');
 //});
 
-Gate::define('gate-name', function() {
-
-});
-
-Gate::define('impossible-gate', function() {
-    return false; //No autorizat
-});
-
-Gate::define('easy-gate', function() {
-    return true; //Autorizat
-});
-
-Gate::define('update-task1', function($user, $task) {
-    return $user->id == $task->user_id;
-});
-
-Gate::define('update-task2', function($user, $task) {
-    if($user->isAdmin()) return true;
-    return $user->id == $task->user_id;
-});
-
-Gate::define('update-task3', function($user, $task) {
-    if($user->isAdmin()) return true;
-    if($user->hasRole('editor')) return true;
-    return $user->id == $task->user_id;
-});
 
 
 
 Route::group(['middleware' => 'auth'], function (){
-    Route::get('/tasks', function (){
-       return view('tasks');
+    Route::group(['middleware' => 'can:show,App\Task'], function(){
+
+        Route::get('/tasks', function (){
+            return view('tasks');
+        });
+
     });
+
 
     Route::get('/profile/tokens', function (){
         return view('tokens');

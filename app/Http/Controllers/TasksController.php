@@ -50,13 +50,16 @@ class TasksController extends Controller
     public function index(Request $request)
     {
 
-            // No metadata
-            // Pagination
-            // No error messages
-            // Transformations: hem de transformar el que ensenyem
+
+        if (Gate::allows('show-tasks')){
             $tasks = Task::paginate(15);
 
             return $this->generatePaginatedResponse($tasks, ['propietari' => 'Sergi Tur']);
+
+        }
+
+        abort(403);
+
 
     }
 
@@ -148,7 +151,9 @@ class TasksController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $task = Task::findOrFail($id);
+
+        $this->authorize('update', $task);
     }
 
     /**
