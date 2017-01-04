@@ -21,15 +21,18 @@ class BasePolicy
 
     public function show(User $user)
     {
-        if($user->hasRole('admin')) return true;
-        return false;
+//        if($user->hasRole('admin')) return true;
+//        return false;
+        return true;
     }
 
 
 
     public function view(User $user, Task $task)
     {
-        if($user ->hasPermissionTo('view-'. $this->model())) return true;
+//        if($user ->hasPermissionTo('view-'. $this->model())) return true;
+
+        return true;
     }
 
     /**

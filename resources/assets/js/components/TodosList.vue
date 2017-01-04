@@ -50,22 +50,12 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr v-for="(todo, index) in filteredTodos">
-                        <td>{{index + 1}}</td>
-                        <td>{{todo.name}}</td>
-                        <td>{{todo.priority}}</td>
-                        <td>{{todo.done}}</td>
-                        <td>
-                            <div class="progress progress-xs">
-                                <div class="progress-bar progress-bar-danger" style="width: 55%"></div>
-                            </div>
-                        </td>
-                        <td><button type="button" class="btn btn-default btn-sm"
-                                    v-on:click="deleteTask(index)">
-                                <i class="fa fa-trash-o"></i>
-                            </button>
-                        </td>
-                    </tr>
+                    <todo v-for="(todo, index) in filteredTodos"
+                          v-bind:todo="todo"
+                          v-bind:index="index"
+                          v-bind:from="from"
+                          @todo-deleted="deleteTodo"></todo>
+
                     </tbody>
 
                 </table>
@@ -94,10 +84,11 @@
 
 <script>
 import Pagination from './Pagination.vue'
+import Todo from './Todo.vue'
 
      export default {
 
-     components : { Pagination },
+     components : { Pagination, Todo },
          data(){
             return {
                 message: 'Hello Vue que tal!',
