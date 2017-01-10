@@ -10,54 +10,137 @@
 <body>
 
 <style>
+	body{
+		margin-bottom: 50px;
+		margin: 0px;
+	}
 	#nav{
-		display: block;
+		position:absolute;
 		left: 0px;
 		width: 200px;
 		border: solid black 1px;
 
 	}
 
-	#section1{
+	#section{
 		margin-left: 200px;
 		border: solid black 1px;
 		padding: 5px 5px;
 	}
-	#section2{
-		margin-left: 200px;
+
+	#footer{
+		button:0px;
+		height: 50px;
+		position: fixed;
 		border: solid black 1px;
+		width: 100%;
+		background-color: lightblue;
 	}
 
-
-
+	#container{
+		position: relative;
+	}
 
 </style>
 
+<div id="container">
+	<div id="nav">
+		<ul>
+			<li>Link1</li>
+			<li>Link2</li>
+			<li>Link3</li>
+			<li>Link4</li>
+			<li>Link5</li>
 
-<div id="nav">
-	<ul>
-		<li>Link1</li>
-		<li>Link2</li>
-		<li>Link3</li>
-		<li>Link4</li>
-		<li>Link5</li>
+		</ul>
+	</div>
 
-	</ul>
+	<div id="section">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci corporis distinctio ea incidunt, iste maxime minima molestias mollitia natus nobis non officia qui reprehenderit saepe similique sit suscipit unde. Omnis.
+	</div>
+	<div id="section">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur debitis deleniti eveniet ex exercitationem facere impedit incidunt ipsam, labore laboriosam magni mollitia nam quia quis rem saepe sapiente sed veniam.
+	</div>
+
+	<div id="section">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci corporis distinctio ea incidunt, iste maxime minima molestias mollitia natus nobis non officia qui reprehenderit saepe similique sit suscipit unde. Omnis.
+	</div>
+
+	<div id="section">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur debitis deleniti eveniet ex exercitationem facere impedit incidunt ipsam, labore laboriosam magni mollitia nam quia quis rem saepe sapiente sed veniam.
+	</div>
+
+	<div id="section">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci corporis distinctio ea incidunt, iste maxime minima molestias mollitia natus nobis non officia qui reprehenderit saepe similique sit suscipit unde. Omnis.
+	</div>
+
+	<div id="section">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur debitis deleniti eveniet ex exercitationem facere impedit incidunt ipsam, labore laboriosam magni mollitia nam quia quis rem saepe sapiente sed veniam.
+	</div>
+
+	<div id="section">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci corporis distinctio ea incidunt, iste maxime minima molestias mollitia natus nobis non officia qui reprehenderit saepe similique sit suscipit unde. Omnis.
+	</div>
+
+	<div id="section">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur debitis deleniti eveniet ex exercitationem facere impedit incidunt ipsam, labore laboriosam magni mollitia nam quia quis rem saepe sapiente sed veniam.
+	</div>
+
+	<div id="section">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci corporis distinctio ea incidunt, iste maxime minima molestias mollitia natus nobis non officia qui reprehenderit saepe similique sit suscipit unde. Omnis.
+	</div>
+
+	<div id="section">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur debitis deleniti eveniet ex exercitationem facere impedit incidunt ipsam, labore laboriosam magni mollitia nam quia quis rem saepe sapiente sed veniam.
+	</div>
+
+	<div id="section">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci corporis distinctio ea incidunt, iste maxime minima molestias mollitia natus nobis non officia qui reprehenderit saepe similique sit suscipit unde. Omnis.
+	</div>
+	<div id="section">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur debitis deleniti eveniet ex exercitationem facere impedit incidunt ipsam, labore laboriosam magni mollitia nam quia quis rem saepe sapiente sed veniam.
+	</div>
+
+	<div id="section">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci corporis distinctio ea incidunt, iste maxime minima molestias mollitia natus nobis non officia qui reprehenderit saepe similique sit suscipit unde. Omnis.
+	</div>
+
+	<div id="section">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci corporis distinctio ea incidunt, iste maxime minima molestias mollitia natus nobis non officia qui reprehenderit saepe similique sit suscipit unde. Omnis.
+	</div>
+
+	<div id="section">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur debitis deleniti eveniet ex exercitationem facere impedit incidunt ipsam, labore laboriosam magni mollitia nam quia quis rem saepe sapiente sed veniam.
+	</div>
+
+	<div id="section">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci corporis distinctio ea incidunt, iste maxime minima molestias mollitia natus nobis non officia qui reprehenderit saepe similique sit suscipit unde. Omnis.
+	</div>
+
+	<div id="section">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur debitis deleniti eveniet ex exercitationem facere impedit incidunt ipsam, labore laboriosam magni mollitia nam quia quis rem saepe sapiente sed veniam.
+	</div>
+
+	<div id="section">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci corporis distinctio ea incidunt, iste maxime minima molestias mollitia natus nobis non officia qui reprehenderit saepe similique sit suscipit unde. Omnis.
+	</div>
+	<div id="section">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur debitis deleniti eveniet ex exercitationem facere impedit incidunt ipsam, labore laboriosam magni mollitia nam quia quis rem saepe sapiente sed veniam.
+	</div>
+
+	<div id="section">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci corporis distinctio ea incidunt, iste maxime minima molestias mollitia natus nobis non officia qui reprehenderit saepe similique sit suscipit unde. Omnis.
+	</div>
+
+
+
+
+	<div id="footer">
+		Copyright
+	</div>
 </div>
-
-<div id="section1">
-	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur debitis deleniti eveniet ex exercitationem facere impedit incidunt ipsam, labore laboriosam magni mollitia nam quia quis rem saepe sapiente sed veniam.
-</div>
-
-<div id="section2">
-	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci corporis distinctio ea incidunt, iste maxime minima molestias mollitia natus nobis non officia qui reprehenderit saepe similique sit suscipit unde. Omnis.
-</div>
-
-<div id="footer">
-	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur deleniti distinctio eum exercitationem facere illo, laudantium optio sapiente vel? Cupiditate error harum perspiciatis recusandae rem repudiandae totam vel velit voluptatibus?
-</div>
-
 
 
 </body>
+
 </html>
