@@ -51,14 +51,19 @@ class TasksController extends Controller
     {
 
 
-        if (Gate::allows('show-tasks')){
-            $tasks = Task::paginate(15);
+//        if (Gate::allows('show-tasks')){
+//            $tasks = Task::paginate(15);
+//
+//            return $this->generatePaginatedResponse($tasks, ['propietari' => 'Sergi Tur']);
+//
+//        }
+//
+//        abort(403);
 
-            return $this->generatePaginatedResponse($tasks, ['propietari' => 'Sergi Tur']);
-
-        }
-
-        abort(403);
+        $this->authorize('show', \App\Task::class);
+        // The current user can update the post...
+        $tasks = Task::paginate(15);
+        return $this->generatePaginatedResponse($tasks, ['propietari' => 'Sergi Tur']);
 
 
     }
