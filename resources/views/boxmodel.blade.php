@@ -10,10 +10,27 @@
 <body>
 
 <style>
+
+	*{
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
 	#bloc1
 	{
 		width: 600px;
-		margin:0 auto;
+		margin: 20px auto;
+		border: solid green 10px;
+
+	}
+
+	#bloc2
+	{
+		width: 600px;
+		margin: 20px auto;
+		padding: 50px;
+		border: solid blue 10px;
+		border-width: 10px;
 	}
 
 </style>
@@ -26,7 +43,7 @@
 	<a href="www.google.com">Google</a>
 </div>
 
-<div class="bloc2">
+<div id="bloc2">
 	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci animi architecto beatae, dicta ducimus error, explicabo incidunt ipsam ipsum iusto laudantium libero magni maxime, minus necessitatibus nihil nostrum perferendis quaerat reiciendis rem repudiandae sequi vero voluptates? Accusamus consectetur doloremque et expedita ipsam, nisi quaerat quas quia tempora! Blanditiis ea eligendi enim eveniet excepturi fuga illo iusto, laborum numquam optio perspiciatis quasi, repudiandae sint veritatis vero? Ex magni maxime nihil quibusdam reprehenderit vel velit veniam veritatis vitae. Accusantium beatae delectus, dolores eaque esse fugit in quidem quod reiciendis veritatis. A accusantium aperiam atque delectus ea error est expedita laudantium mollitia officia? A animi autem et laborum nulla perferendis quaerat quo similique, tempore voluptatum. Aliquam at, aut culpa distinctio, earum eius error ipsam laborum mollitia necessitatibus nemo nesciunt odit officiis placeat qui quia quisquam reiciendis reprehenderit tempora totam unde ut, voluptatum. Aperiam aspernatur at, beatae cumque dicta, et eum eveniet illum itaque laborum magni maxime minima mollitia neque porro possimus provident qui quis repellat soluta suscipit tenetur, vero voluptates? Consequatur eligendi ex expedita ipsam iusto labore libero necessitatibus nesciunt sed sequi. Cupiditate dignissimos distinctio dolor error ex illum ipsum itaque nisi non omnis perspiciatis possimus quam quibusdam quis quisquam sit suscipit, vero? Eligendi exercitationem inventore optio pariatur repellendus sit unde voluptas! Accusantium asperiores dolore maiores ut vero. Aspernatur, assumenda at doloremque enim ex illum ipsam iste, maiores neque officiis quos similique vero vitae! Accusantium, dolorum eum ipsam magni minima neque nisi nobis, non numquam odio pariatur quo quos rerum, similique ut. Accusantium ad architecto atque, aut beatae dicta ea eius, esse exercitationem id maxime minima officiis pariatur provident quaerat quas qui, similique. Ab aspernatur atque dicta dolorum exercitationem hic ipsam placeat, porro quo, quod repudiandae temporibus, ullam? Esse exercitationem maiores, odio praesentium qui reprehenderit temporibus velit? Ab accusamus aliquid amet atque blanditiis consequatur consequuntur debitis dicta enim excepturi facere facilis in incidunt ipsam iste iure iusto labore maxime mollitia natus nisi odio pariatur, praesentium quaerat quibusdam quidem quod ratione reiciendis repellat, sed similique sunt velit voluptatum. Consequatur cum cupiditate deserunt enim facilis incidunt ipsam maiores, modi non odit praesentium saepe vel. Accusamus ad amet commodi culpa cupiditate debitis dicta distinctio, dolor dolore dolorum ea expedita facilis fugiat illum in ipsam laboriosam libero modi molestiae nihil nisi non officia officiis pariatur placeat provident quidem quisquam quod quos ratione repellendus saepe sequi unde vel veritatis voluptas voluptatibus. A, aperiam architecto asperiores aspernatur beatae dignissimos dolorem ducimus esse ex explicabo fuga, ipsum iure labore minus necessitatibus, placeat quam quis! Accusamus aliquid animi architecto consequuntur deleniti distinctio dolore est ex fuga hic iure laborum laudantium maiores mollitia, necessitatibus nemo nihil nobis porro provident quam quasi quisquam recusandae repellat repellendus, reprehenderit saepe sunt temporibus unde voluptas voluptatibus? Adipisci alias aliquam asperiores aut consectetur cum dolore eius facere labore natus nobis omnis optio sed similique totam ullam veniam, voluptatem? Aut fugiat laborum neque non, reiciendis totam vitae voluptatem voluptatum? Ad at dolore id nesciunt, pariatur sapiente vero? Blanditiis, dolores dolorum. Aperiam, autem cum debitis incidunt ipsa itaque natus.
 </div>
 

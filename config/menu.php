@@ -2,13 +2,13 @@
 
 use Spatie\Menu\Laravel\Menu;
 
-Menu::macro('fullsubmenuexample', function () {
-    return Menu::new()->prepend('<a href="#"><span> Multilevel PROVA </span> <i class="fa fa-angle-left pull-right"></i></a>')
-        ->addParentClass('treeview')
-        ->add(Link::to('/link1prova', 'Link1 prova'))->addClass('treeview-menu')
-        ->add(Link::to('/link2prova', 'Link2 prova'))->addClass('treeview-menu')
-        ->url('http://www.google.com', 'Google');
-});
+//Menu::macro('fullsubmenuexample', function () {
+//    return Menu::new()->prepend('<a href="#"><span> Multilevel PROVA </span> <i class="fa fa-angle-left pull-right"></i></a>')
+//        ->addParentClass('treeview')
+//        ->add(Link::to('/link1prova', 'Link1 prova'))->addClass('treeview-menu')
+//        ->add(Link::to('/link2prova', 'Link2 prova'))->addClass('treeview-menu')
+//        ->url('http://www.google.com', 'Google');
+//});
 
 Menu::macro('adminlteSubmenu', function ($submenuName) {
     return Menu::new()->prepend('<a href="#"><span> ' . $submenuName . '</span> <i class="fa fa-angle-left pull-right"></i></a>')
@@ -29,6 +29,7 @@ Menu::macro('sidebar', function () {
 //        ->url('http://www.google.com', 'Google')
         ->add(Menu::adminlteSeparator('Acacha Adminlte'))
         #adminlte_menu
+        ->add(Link::toUrl('boxmodel', 'Boxmodel'))
         ->add(Menu::adminlteSeparator('SECONDARY MENU'))
         ->add(Menu::new()->prepend('<a href="#"><span>Multilevel</span> <i class="fa fa-angle-left pull-right"></i></a>')
             ->addParentClass('treeview')

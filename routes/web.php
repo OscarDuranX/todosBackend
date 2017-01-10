@@ -31,6 +31,8 @@ Route::group(['middleware' => 'auth'], function (){
     Route::get('/profile/tokens', function (){
         return view('tokens');
     });
+
+
 });
 
 Route::get('/', function (){
@@ -40,3 +42,8 @@ Route::get('/', function (){
 Route::get('/phpinfo', function (){
     phpinfo();
 });
+
+#adminlte_routes
+    Route::get('boxmodel', 'BoxmodelController@index')->name('boxmodel');
+
+
