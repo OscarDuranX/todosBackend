@@ -10,65 +10,52 @@
 <body>
 
 <style>
-
-	*{
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
-		box-sizing: border-box;
-	}
-	#bloc1
-	{
-		width: 600px;
-		margin: 20px auto;
-		border: solid green 10px;
-		box-sizing: border-box;
-	}
-
-	#bloc2
-	{
-		position: relative;
-		top: 100px;
-		width: 600px;
-		margin: 20px auto;
-		padding: 50px;
-		border: solid blue 10px;
-		box-sizing: border-box;
-	}
-
-	#bloc3
-	{
-		position: absolute;
-		top: 0px;
-		right:0px;
-		margin: 20px auto;
-		padding: 50px;
-		border: solid blue 10px;
-		box-sizing: border-box;
-		width: 600px;
+	#nav{
+		display: block;
+		left: 0px;
+		width: 200px;
+		border: solid black 1px;
 
 	}
+
+	#section1{
+		margin-left: 200px;
+		border: solid black 1px;
+		padding: 5px 5px;
+	}
+	#section2{
+		margin-left: 200px;
+		border: solid black 1px;
+	}
+
+
+
 
 </style>
 
 
+<div id="nav">
+	<ul>
+		<li>Link1</li>
+		<li>Link2</li>
+		<li>Link3</li>
+		<li>Link4</li>
+		<li>Link5</li>
 
-<div id="bloc1">
-	<span>provaprovaprova</span>
-	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium dolor esse iure nisi provident repellendus sit ullam unde velit vitae.
-	<a href="www.google.com">Google</a>
+	</ul>
 </div>
 
-<div id="bloc2">
-	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci animi architecto beatae, dicta ducimus error, explicabo incidunt ipsam ipsum iusto laudantium libero magni maxime,
-
-
-	<div id="bloc3">
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, aut dignissimos distinctio dolore earum est inventore, maxime minus nam nostrum perspiciatis quaerat reprehenderit repudiandae totam veniam! Dolorum itaque laboriosam perspiciatis.
-	</div>
-
+<div id="section1">
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur debitis deleniti eveniet ex exercitationem facere impedit incidunt ipsam, labore laboriosam magni mollitia nam quia quis rem saepe sapiente sed veniam.
 </div>
 
+<div id="section2">
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci corporis distinctio ea incidunt, iste maxime minima molestias mollitia natus nobis non officia qui reprehenderit saepe similique sit suscipit unde. Omnis.
+</div>
 
+<div id="footer">
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur deleniti distinctio eum exercitationem facere illo, laudantium optio sapiente vel? Cupiditate error harum perspiciatis recusandae rem repudiandae totam vel velit voluptatibus?
+</div>
 
 
 
