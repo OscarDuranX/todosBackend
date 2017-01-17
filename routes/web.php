@@ -50,6 +50,8 @@ Route::get('/phpinfo', function (){
 });
 
 #adminlte_routes
+    Route::get('flexboxlayout', 'FlexboxlayoutController@index')->name('flexboxlayout');
+
     Route::get('csstables', 'CsstablesController@index')->name('csstables');
 
     Route::get('boxmodel', 'BoxmodelController@index')->name('boxmodel');
@@ -57,4 +59,8 @@ Route::get('/phpinfo', function (){
 
 Route::get('/float', function (){
     return view('float');
+});
+
+Route::get('/csstables', function (){
+    return view('csstables');
 });
