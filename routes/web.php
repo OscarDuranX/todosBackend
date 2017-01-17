@@ -22,7 +22,11 @@ Route::group(['middleware' => 'auth'], function (){
     Route::group(['middleware' => 'can:show,App\Task'], function(){
 
         Route::get('/tasks', function (){
-            return view('tasks');
+            $token = "TODO";
+            $data =[
+                "access_token" => $token
+            ];
+            return view('tasks',$data);
         });
 
     });
@@ -31,6 +35,8 @@ Route::group(['middleware' => 'auth'], function (){
     Route::get('/profile/tokens', function (){
         return view('tokens');
     });
+
+
 
 
 });
