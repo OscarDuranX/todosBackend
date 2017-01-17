@@ -64,3 +64,8 @@ Route::get('/float', function (){
 Route::get('/csstables', function (){
     return view('csstables');
 });
+
+Route::get('/flexboxlayout', function (){
+    return view('flexboxlayout');
+});
+
