@@ -50,6 +50,11 @@ Route::get('/phpinfo', function (){
 });
 
 #adminlte_routes
+    Route::get('csstables', 'CsstablesController@index')->name('csstables');
+
     Route::get('boxmodel', 'BoxmodelController@index')->name('boxmodel');
 
 
+Route::get('/float', function (){
+    return view('float');
+});

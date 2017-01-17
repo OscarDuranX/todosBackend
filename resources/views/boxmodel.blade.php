@@ -13,6 +13,7 @@
 	body{
 		margin-bottom: 50px;
 		margin: 0px;
+		float: left;
 	}
 	#nav{
 		position:absolute;
@@ -24,7 +25,6 @@
 
 	#section{
 		margin-left: 200px;
-		border: solid black 1px;
 		padding: 5px 5px;
 	}
 
@@ -32,7 +32,6 @@
 		button:0px;
 		height: 50px;
 		position: fixed;
-		border: solid black 1px;
 		width: 100%;
 		background-color: lightblue;
 	}
