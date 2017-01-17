@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request  as BaseController;
+use Illuminate\Http\Request as BaseController;
 
-class CsstablesController extends BaseController
+class BootstraplayoutController extends BaseController
 {
     //
     /**
@@ -14,7 +14,7 @@ class CsstablesController extends BaseController
     public function index()
     {
         $data = [];
-        return view('csstables',$data);
+        return view('bootstraplayout',$data);
     }
 
 }

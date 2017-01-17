@@ -50,6 +50,8 @@ Route::get('/phpinfo', function (){
 });
 
 #adminlte_routes
+    Route::get('bootstraplayout', 'BootstraplayoutController@index')->name('bootstraplayout');
+
     Route::get('flexboxlayout', 'FlexboxlayoutController@index')->name('flexboxlayout');
 
     Route::get('csstables', 'CsstablesController@index')->name('csstables');
@@ -61,11 +63,7 @@ Route::get('/float', function (){
     return view('float');
 });
 
-Route::get('/csstables', function (){
-    return view('csstables');
-});
 
-Route::get('/flexboxlayout', function (){
-    return view('flexboxlayout');
-});
+
+
 
