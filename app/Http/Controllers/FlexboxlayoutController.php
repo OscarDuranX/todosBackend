@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use Illuminate\Http\Request as BaseController;
 
-class FlexboxlayoutController extends Controller
+class FlexboxlayoutController extends BaseController
 {
     //
     /**

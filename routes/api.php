@@ -10,7 +10,8 @@
 ////    Route::resource('task.user','TaskUserController');
 //});
 
-Route::group(['prefix' => 'v1','middleware' => 'auth:api'], function () {
+//Route::group(['prefix' => 'v1','middleware' => 'auth:api'], function () {
+Route::group(['prefix' => 'v1','middleware' => 'auth:cors'], function () {
     Route::resource('task', 'TasksController');
     Route::resource('user', 'UsersController');
     Route::resource('user.task', 'UserTasksController');

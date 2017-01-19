@@ -1,7 +1,12 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Spatie\Permission\Models\Role;
 
+
+/**
+ * Class AdminUsersSeeder
+ */
 class AdminUsersSeeder extends Seeder
 {
     /**
@@ -12,15 +17,13 @@ class AdminUsersSeeder extends Seeder
     public function run()
     {
         try {
-            factory(App\User::class)->create([
+            $user = factory(App\User::class)->create([
                     "name" => "Oscar Duran",
                     "email" => "oscarduran@gmail.com",
                     "password" => bcrypt(env('OSCAR_PWD', '123456'))]
-            )->each(function ($user) {
-                $user->tasks()->saveMany(
-                    factory(App\Task::class, 5)->create(['user_id' => $user->id])
-                );
-            });
+            );
+            Role::create(['name' => 'admin']);
+            $user->assignRole('admin');
 
 
         } catch (\Illuminate\Database\QueryException $exception) {
