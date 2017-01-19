@@ -20,7 +20,6 @@
             </div>
             <div class="box-header with-border">
                 <h3 class="box-title">Tasques</h3>
-
                 <div class="btn-group">
                     <button type="button" class="btn btn-info">{{visibility}}</button>
                     <button type="button" class="btn btn-info btn-flat dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
@@ -33,45 +32,43 @@
                         <li><a href="#" @click="setVisibility('completed')">Done</a></li>
                     </ul>
                 </div>
-
             </div>
             <!-- /.box-header -->
             <div class="box-body">
                 <table class="table table-bordered">
-
                     <thead>
-                    <tr>
-                        <th style="width: 10px">#</th>
-                        <th>Task</th>
-                        <th>Priority</th>
-                        <th>Done</th>
-                        <th>Progress</th>
-                        <th style="width: 40px">Delete</th>
-                    </tr>
+                        <tr>
+                            <th style="width: 10px">#</th>
+                            <th>Task</th>
+                            <th>Priority</th>
+                            <th>Done</th>
+                            <th>Progress</th>
+                            <th style="width: 40px">Delete</th>
+                            <th>Actions</th>
+                        </tr>
                     </thead>
                     <tbody>
-                    <todo v-for="(todo, index) in filteredTodos"
-                          v-bind:todo="todo"
-                          v-bind:index="index"
-                          v-bind:from="from"
-                          @todo-deleted="deleteTodo"></todo>
-
+                        <todo v-for="(todo, index) in filteredTodos"
+                              v-bind:todo="todo"
+                              v-bind:index="index"
+                              v-bind:from="from"
+                              v-bind:page="page"
+                              v-bind:fetchPage="fetchPage"
+                              @todo-deleted="deleteTodo"> </todo>
                     </tbody>
 
                 </table>
             </div>
             <!-- /.box-body -->
             <!--TODO http://www.pontikis.net/labs/bs_pagination/demo/-->
-            <div class="box-footer clearfix">ç
-
+            <div class="box-footer clearfix">
                 <span class="pull-left">Showing {{ from }} to {{ to }} of {{ total }} entries</span>
 
                 <pagination
-                        :current-page="1"
-                        :total-pages="perPage"
-                        :total-items="total">
-
-                </pagination>
+                        :current-page="page"
+                        :items-per-page="perPage"
+                        :total-items="total"
+                        @page-changed="pageChanged"> </pagination>
 
             </div>
         </div>
@@ -91,15 +88,15 @@ import Todo from './Todo.vue'
      components : { Pagination, Todo },
          data(){
             return {
-                message: 'Hello Vue que tal!',
                 seen: false,
                 todos: [],
                 visibility: 'all',
                 newTodo: '',
-                perPage: 5,
+                perPage: 0,
                 from: 0,
                 to: 0,
-                total: 0
+                total: 0,
+                page: 1,
             }
          },
 
@@ -126,8 +123,22 @@ import Todo from './Todo.vue'
          },
 
          methods: {
-            deleteTask: function(index){
-                this.todos.splice(index, 1);
+            deleteTodo: function(id){
+                var del = this;
+                swal({
+                  title: "Are you sure?",
+                  text: "You will not be able to recover this task!",
+                  type: "warning",
+                  showCancelButton: true,
+                  confirmButtonColor: "#DD6B55",
+                  confirmButtonText: "Yes, delete it!",
+                  closeOnConfirm: false
+                },
+                function(){
+                    del.delTodoFromApi(id);
+                    del.fetchPage(del.page);
+                    swal("Deleted!", "Your task has been deleted.", "success");
+                });
 
             },
             addTodo: function() {
@@ -140,60 +151,61 @@ import Todo from './Todo.vue'
                     priority: 1,
                     done: false
                 });
+                this.todos.push(todo);
+                this.addTodoToApi(todo);
                 this.newTodo = '';
             },
             setVisibility: function(visibility) {
-                console.log(visibility);
                 this.visibility = visibility;
             },
             reverseMessage:function () {
                 this.message= this.message.split('').reverse().join('');
             },
             fetchData: function() {
-            // GET /someUrl
-                this.$http.get('/api/v1/task').then((response) => {
-                    this.todos = response.data.data;
+                return this.fetchPage(1);
+            },
+            addTodoToApi: function(page) {
+                 this.$http.post('/api/v1/task?', {
+                        name: todo.name,
+                        priority: todo.priority,
+                        done: todo.done,
+                        user_id: todo.user_id,
+                 }).then((response) => {
+                    console.log('Task with name \"' + todo.name + '\" created succesfully!');
+                 }, (response) => {
+                    // error callback
+                    sweetAlert("Oops...", "Something went wrong!", "error");
                     console.log(response);
+                 });
+                 this.fetchPage(this.page);
+            },
+            pageChanged: function(pageNum) {
+                this.page = pageNum;
+                this.fetchPage(pageNum);
+            },
+            fetchPage: function(page) {
+            // GET /someUrl
+                this.$http.get('/api/v1/task?page=' + page).then((response) => {
+                    console.log(response);
+                    this.todos = response.data.data;
+                    this.perPage = response.data.per_page;
+                    this.to = response.data.to;
+                    this.from = response.data.from;
+                    this.total = response.data.total;
                 }, (response) => {
-            // error callback
+                    // error callback
                     sweetAlert("Oops...", "Something went wrong!", "error");
                     console.log(response);
                 });
             },
-            addTodoToApi: function(page) {
-             this.$http.post('/api/v1/task?', {
-                    name: todo.name,
-                    priority: todo.priority,
-                    done: todo.done,
-                    user_id: 1
-                }).then((response) => {
-                console.log(response);
-            }, (response) => {
-                // error callback
-                sweetAlert("Oops...", "Something went wrong!", "error");
-                console.log(response);
-            });
-
-            },
-
-            fetchPage: function(page) {
-            // GET /someUrl
-            this.$http.get('/api/v1/task?page=' + page).then((response) => {
-                console.log(response);
-                this.todos = response.data.data;
-                this.perPage = response.data.per_page;
-                this.to = response.data.to;
-                this.from = response.data.from;
-                this.total = response.data.total;
-            }, (response) => {
-                // error callback
-                sweetAlert("Oops...", "Something went wrong!", "error");
-                console.log(response);
-            });
-            },
-
-
-
+            delTodoFromApi: function(id) {
+                this.$http.delete('/api/v1/task/' + id).then((response) => {
+                    console.log('Task ' + id + ' deleted succesfully!');
+                }, (response) => {
+                    sweetAlert("Oops...", "Something went wrong!", "error");
+                    console.log(response);
+                });
+            }
          },
          created: function() {
             console.log('Component created!');

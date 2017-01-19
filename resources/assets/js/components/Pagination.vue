@@ -1,21 +1,14 @@
 <template>
     <ul class="pagination pagination-sm no-margin pull-right">
-        <li><a href="#" @click.prevent="">&laquo;</a></li>
-
         <li> <a href="#" @click.prevent="pageChanged(1)" aria-label="First">&laquo;</a></li>
         <li> <a href="#" @click.prevent="pageChanged(page-1)" aria-label="Previus">&lt;</a></li>
 
-        <li v-for="n in paginationRange">
+        <li v-for="n in paginationRange" :class="activePage(n)">
             <a href="#" @click.prevent="pageChanged(n)">{{n}}</a>
         </li>
 
         <li> <a href="#" @click.prevent="pageChanged(page+1)" aria-label="Next">&gt;</a></li>
         <li> <a href="#" @click.prevent="pageChanged(lastPage)" aria-label="Last">&raquo;</a></li>
-
-
-
-
-        <li><a href="#">&raquo;</a></li>
     </ul>
 </template>
 <style>
@@ -49,10 +42,13 @@ export default {
           },
 
           pageChanged (pageNum){
-            if (pageNum <=1) pageNum=1
-            if (pageNum>=this.lastPage) pageNum=lastPage
-            this.page
-            this.$emit('page-changed', pageNum)
+            if (pageNum <=1) pageNum=1;
+            if (pageNum>=this.lastPage) pageNum=lastPage,
+            this.page = pageNum;
+            this.$emit('page-changed', pageNum);
+          },
+          activePage (pageNum) {
+            return this.currentPage === pageNum ? 'active' : ''
           },
     },
 
@@ -76,7 +72,10 @@ export default {
                 range.push(start + i)
               }
               return range
-            }
+        },
+        created() {
+            this.page = this.currentPage;
+        }
     }
 }
 </script>
