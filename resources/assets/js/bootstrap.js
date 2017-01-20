@@ -35,6 +35,8 @@ require('sweetalert');
 
 axios.defaults.headers.common['X-CSRF-TOKEN'] = Laravel.csrfToken;
 
+axios.defaults.headers.common[''] = access_token;
+
 // Vue.http.interceptors.push((request, next) => {
 //     request.headers['X-CSRF-TOKEN'] = Laravel.csrfToken;
 //

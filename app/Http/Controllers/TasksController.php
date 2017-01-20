@@ -60,10 +60,10 @@ class TasksController extends Controller
 //
 //        abort(403);
 
-        $this->authorize('show', \App\Task::class);
+//        $this->authorize('show', \App\Task::class);
         // The current user can update the post...
         $tasks = Task::paginate(15);
-        return $this->generatePaginatedResponse($tasks, ['propietari' => 'Sergi Tur']);
+        return $this->generatePaginatedResponse($tasks, ['propietari' => 'Oscar Duran']);
 
 
     }
