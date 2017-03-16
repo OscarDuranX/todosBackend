@@ -25,7 +25,7 @@ Route::group(['middleware' => 'auth'], function (){
 //            $data =[
 //                "access_token" => $token
 //            ];
-            return view('tasks',$data);
+            return view('tasks');
         });
 
     });
